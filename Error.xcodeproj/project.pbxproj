@@ -10,6 +10,7 @@
 		8FD875DB1C762D2E00181FA6 /* Error.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FD875DA1C762D2E00181FA6 /* Error.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8FD875E21C762D2E00181FA6 /* Error.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD875D71C762D2E00181FA6 /* Error.framework */; };
 		8FD875E71C762D2E00181FA6 /* ErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD875E61C762D2E00181FA6 /* ErrorTests.swift */; };
+		8FD875F21C762D4700181FA6 /* NSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD875F11C762D4700181FA6 /* NSError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		8FD875E11C762D2E00181FA6 /* ErrorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ErrorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD875E61C762D2E00181FA6 /* ErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTests.swift; sourceTree = "<group>"; };
 		8FD875E81C762D2F00181FA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FD875F11C762D4700181FA6 /* NSError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		8FD875D91C762D2E00181FA6 /* Error */ = {
 			isa = PBXGroup;
 			children = (
+				8FD875F11C762D4700181FA6 /* NSError.swift */,
 				8FD875DA1C762D2E00181FA6 /* Error.h */,
 				8FD875DC1C762D2E00181FA6 /* Info.plist */,
 			);
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FD875F21C762D4700181FA6 /* NSError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +312,7 @@
 		8FD875EC1C762D2F00181FA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -318,12 +323,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.silverback-it.Error";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		8FD875ED1C762D2F00181FA6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
