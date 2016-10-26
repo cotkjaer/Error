@@ -1,6 +1,6 @@
 //
 //  NSError.swift
-//  Silverback
+//  Error
 //
 //  Created by Christian Otkjær on 16/11/15.
 //  Copyright © 2015 Christian Otkjær. All rights reserved.
@@ -22,11 +22,11 @@ extension NSError
         
         if description != nil
         {
-            errorUserInfo[NSLocalizedDescriptionKey] = description ?? ""
+            errorUserInfo[NSLocalizedDescriptionKey] = description as AnyObject?? ?? "" as AnyObject?
         }
         if reason != nil
         {
-            errorUserInfo[NSLocalizedFailureReasonErrorKey] = reason ?? ""
+            errorUserInfo[NSLocalizedFailureReasonErrorKey] = reason as AnyObject?? ?? "" as AnyObject?
         }
         
         if underlyingError != nil
