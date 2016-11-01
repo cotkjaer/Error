@@ -11,6 +11,8 @@ import UIKit
 
 extension NSError
 {
+    public var underlyingError : NSError? { return userInfo[NSUnderlyingErrorKey] as? NSError }
+    
     public convenience init(
         domain: String,
         code: Int,
@@ -26,7 +28,8 @@ extension NSError
         }
         if reason != nil
         {
-            errorUserInfo[NSLocalizedFailureReasonErrorKey] = reason as AnyObject?? ?? "" as AnyObject?
+            errorUserInfo[NSLocalizedFailureReasonErrorKey] = reason as NSString?
+//            errorUserInfo[NSLocalizedFailureReasonErrorKey] = reason as AnyObject?? ?? "" as AnyObject?
         }
         
         if underlyingError != nil
