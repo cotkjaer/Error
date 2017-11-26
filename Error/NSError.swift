@@ -20,15 +20,16 @@ extension NSError
         reason: String? = nil,
         underlyingError: NSError? = nil)
     {
-        var errorUserInfo: [String : AnyObject] = [:]
+        var errorUserInfo: [String : Any] = [:]
         
         if description != nil
         {
-            errorUserInfo[NSLocalizedDescriptionKey] = description as AnyObject?? ?? "" as AnyObject?
+            errorUserInfo[NSLocalizedDescriptionKey] = description as Any?// as AnyObject?? ?? "" as AnyObject?
         }
+        
         if reason != nil
         {
-            errorUserInfo[NSLocalizedFailureReasonErrorKey] = reason as NSString?
+            errorUserInfo[NSLocalizedFailureReasonErrorKey] = reason // as NSString?
 //            errorUserInfo[NSLocalizedFailureReasonErrorKey] = reason as AnyObject?? ?? "" as AnyObject?
         }
         

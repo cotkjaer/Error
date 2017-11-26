@@ -15,9 +15,9 @@ class ErrorTests: XCTestCase
     {
         let underlyingError = NSError()
         
-        let error = NSError(domain: "doamin", code: 12, description: "localized test description", reason: nil, underlyingError: underlyingError)
+        let error = NSError(domain: "domain", code: 12, description: "localized test description", reason: nil, underlyingError: underlyingError)
         
-        XCTAssertEqual(error.domain, "doamin")
+        XCTAssertEqual(error.domain, "domain")
         XCTAssertEqual(error.localizedDescription, "localized test description")
         XCTAssertNil(error.localizedFailureReason)
         XCTAssertEqual(error.underlyingError, underlyingError)
